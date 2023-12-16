@@ -50,6 +50,20 @@ return function (RouteBuilder $routes): void {
     $routes->setRouteClass(DashedRoute::class);
 
     $routes->scope('/', function (RouteBuilder $builder): void {
+        
+        $builder->connect('/students', ['controller' => 'Students', 'action' => 'StudentsList']);
+        $builder->connect('/add-student', ['controller' => 'Students', 'action' => 'addStudent']);
+        $builder->connect('/edit-student/:id', [
+            'controller' => 'Students', 
+            'action' => 'editStudent']
+         ,["pass"=>["id"]
+        ]);
+        $builder->connect('/delete-student/:id', [
+            'controller' => 'Students', 
+            'action' => 'deleteStudent']
+         ,["pass"=>["id"]
+        ]);
+
         /*
          * Here, we are connecting '/' (base path) to a controller called 'Pages',
          * its action called 'display', and we pass a param to select the view file
