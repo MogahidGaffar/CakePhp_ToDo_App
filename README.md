@@ -2,6 +2,23 @@
 
 This is a simple CRUD (Create, Read, Update, Delete) web app built using CakePHP 4, designed to manage student records.
 
+ <h3 style="text-align:center">list page</h3>
+
+ <p align="center"><a h target="_blank"><img src="https://github.com/MogahidGaffar/CakePhp_ToDo_App/blob/main/webroot/screenshots/index%20page.PNG" height="250" width="500" ></a></p></br>
+
+ <h3 style="text-align:center">Add page</h3>
+
+ <p align="center"><a h target="_blank"><img src="https://github.com/MogahidGaffar/CakePhp_ToDo_App/blob/main/webroot/screenshots/add%20page.PNG" height="250" width="500" ></a></p></br>
+
+ <h3 style="text-align:center">Edit page</h3>
+
+ <p align="center"><a h target="_blank"><img src="https://github.com/MogahidGaffar/CakePhp_ToDo_App/blob/main/webroot/screenshots/edit%20page.PNG" height="250" width="500" ></a></p></br>
+
+ <h3 style="text-align:center">Delete</h3>
+
+ <p align="center"><a h target="_blank"><img src="https://github.com/MogahidGaffar/CakePhp_ToDo_App/blob/main/webroot/screenshots/delete.PNG" height="250" width="500" ></a></p></br>
+
+
 ## Features
 
 - **Student Management**: Perform CRUD operations on student records.
