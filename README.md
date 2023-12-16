@@ -5,7 +5,6 @@ This is a simple CRUD (Create, Read, Update, Delete) web app built using CakePHP
 ## Features
 
 - **Student Management**: Perform CRUD operations on student records.
-- **User Authentication**: Secure login system for administrators.
 - **Responsive Design**: Interface optimized for various devices.
 
 ## Installation
@@ -55,17 +54,17 @@ bin/cake server -p 8765
 Access the app at http://localhost:8765
 
 
-###Usage
+### Usage
 - Log in as an administrator.
 - View the list of students.
 - Add new students with their details.
 - Update existing student records.
 - Delete students from the database.
 
-###Contributing
+### Contributing
 Contributions are welcome! Fork this repository, make changes, and submit a pull request.
 
-###License
+### License
 This project is licensed under the MIT License.
 
 
