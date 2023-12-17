@@ -29,7 +29,7 @@ $this->assign("title",$title);
     <tbody>
         <?php 
         if(count($students) > 0) {
-            foreach($students as $index=>$student)
+            foreach($students as $index=>$student){
        ?>
       <tr>
         <td><?=  $index+=1;  ?></td>
@@ -46,7 +46,7 @@ $this->assign("title",$title);
             <a href="<?= $this->Url->build('/delete-student/'.$student->id,["fullBase"=>true]) ?>" class="btn btn-danger">Delete</a>
  
       </tr>
-   <?php } ?>
+   <?php }} ?>
     </tbody>
   </table>
 
