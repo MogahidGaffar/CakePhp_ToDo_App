@@ -5,13 +5,15 @@ $this->assign("title",$title);
 
 ?>
 <div class="panel panel-primary">
+
     <div class="panel-heading">Students list
     <a href="<?= $this->Url->build("/add-student/",["fullBase"=>true]) ?>" 
     class="btn btn-success pull-right" style="margin-top:-7px">
     Add
        </a>
     </div>
- 
+    <div class="panel-body">
+
     <table class="table table-condensed">
     <thead>
       <tr>
@@ -50,5 +52,6 @@ $this->assign("title",$title);
 
 
 
+  </div>
   </div>
 </div>

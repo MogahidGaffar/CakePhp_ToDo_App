@@ -12,9 +12,11 @@
  
 <div class="container">
   <h2>Students Crud App - @mogahidGffar</h2>
-
 <?= $this->fetch("content"); ?>
+</div>
 
+
+<?= $this->fetch("script"); ?>
 
 
 </body>
