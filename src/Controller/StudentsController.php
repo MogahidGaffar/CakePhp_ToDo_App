@@ -21,6 +21,26 @@ class StudentsController extends AppController{
     }
 
     public function addStudent(){
+        $student = $this->Students->newEmptyEntity();
+
+                if($this->request->is("post")){
+                $fileObject = $this->request->getData("profile_image");
+                $destination=WWW_ROOT . "img" . DS . $fileObject->getClientFilename(); 
+                $fileObject->moveTo($destination);
+                $studentData = $this->request->getData();
+                $studentData["profile_image"]=$fileObject->getClientFilename();
+                $student=$this->Students->patchEntity($student,$studentData);
+                        if($this->Students->save($student)){
+                                $this->Flash->success("Data saved succesfully!");
+                                return $this->redirect( ["action"=>"studentsList"]);
+                        }
+                        else {
+                            $this->Flash->errpr("Failed to save data");
+
+                        }
+        }
+
+        $this->set(compact('student'));        
         $this->set("title","Add student");
 
         

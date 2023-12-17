@@ -14,8 +14,13 @@ $this->assign("title",$title);
        </a>
     </div>
     <div class="panel-body">
-
-    <form class="form-horizontal" action="javasctipt:void(0)" id="frm-add-student">
+<?=
+$this->Form->create($student,[
+    "class"=>"form-horizontal",
+    "id"=>"frm-add-student",
+    "type"=>"file"
+]);
+?>
     <div class="form-group">
     <label class="control-label col-sm-2" >Name :</label>
     <div class="col-sm-10">
@@ -57,7 +62,8 @@ $this->assign("title",$title);
       <button type="submit" class="btn btn-success">Submit</button>
     </div>
   </div>
-</form>
+
+  <?= $this->Form->end(); ?>
 
     </div>
   </div>
