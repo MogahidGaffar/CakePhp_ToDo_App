@@ -10,7 +10,7 @@ namespace App\Model\Table;
 
     class StudentsTable extends Table {
 
-        public function initialize(){
+        public function initialize(array $config) : void {
             $this->setTable("tbl_students");
         } 
 

@@ -51,7 +51,7 @@ return function (RouteBuilder $routes): void {
 
     $routes->scope('/', function (RouteBuilder $builder): void {
         
-        $builder->connect('/students', ['controller' => 'Students', 'action' => 'StudentsList']);
+        $builder->connect('/students', ['controller' => 'Students', 'action' => 'studentsList']);
         $builder->connect('/add-student', ['controller' => 'Students', 'action' => 'addStudent']);
         $builder->connect('/edit-student/:id', [
             'controller' => 'Students', 
