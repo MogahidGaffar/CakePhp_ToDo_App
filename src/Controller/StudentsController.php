@@ -9,11 +9,13 @@ class StudentsController extends AppController{
         public function initialize() : void{
 
                 parent::initialize();
-             //   $this->loadModel("Students");
+                 $this->loadModel("Students");
                 $this->viewBuilder()->setLayout("Student");
         }
 
     public function studentsList(){
+         $students = $this->Students->find()->toList();
+         $this->set(compact('students'));
                 $this->set("title","Students List");
 
     }
