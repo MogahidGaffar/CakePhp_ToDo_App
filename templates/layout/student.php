@@ -11,7 +11,7 @@
 <body>
  
 <div class="container">
-  <h2>Students Crud App - @mogahidGffar</h2>
+  <h2>Students Crud App - @mogahidGaffar</h2>
   <?= $this->Flash->render(); ?>
 
 <?= $this->fetch("content"); ?>
