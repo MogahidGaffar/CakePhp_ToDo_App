@@ -42,9 +42,11 @@ $this->assign("title",$title);
             "style"=>"width:70px;height:70px;paddin-right:60px;",
         ]) : "NA" ?></td>
         <td>
+            <form  method="post" id="frm-delete-student-<?=$student->id ?>" action="<?= $this->Url->build('/delete-student/'.$student->id,["fullBase"=>true]) ?>">
+           <input type="hidden" name="id" value="<?=$student->id ?>"> </input>
             <a href="<?= $this->Url->build('/edit-student/'.$student->id,["fullBase"=>true]) ?>" class="btn btn-warning">Edit</a>
-            <a href="<?= $this->Url->build('/delete-student/'.$student->id,["fullBase"=>true]) ?>" class="btn btn-danger">Delete</a>
- 
+            <a href="javascript:void(0)" onclick="if(confirm('Are you sure you want to delete ?')){$('#frm-delete-student-<?=$student->id ?>').submit()}" class="btn btn-danger">Delete</a>
+        </form>
       </tr>
    <?php }} ?>
     </tbody>

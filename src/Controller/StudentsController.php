@@ -83,6 +83,16 @@ class StudentsController extends AppController{
 
     
     public function deleteStudent($id=null){
+        $this->request->allowMethod(["post","delete"]);
+        $student = $this->Students->get($id);
+
+        if($this->Students->delete($student)){
+                $this->Flash->success("Data Deleted succesfully!");
+                return $this->redirect( ["action"=>"studentsList"]);
+        }
+        else {
+            $this->Flash->error("Failed to Delete data");
+        }
         $this->set("title","Delete student");
 
         
